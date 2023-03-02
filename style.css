@@ -1,0 +1,135 @@
+
+    body{
+    background-color:#80471E;
+    }
+
+    #score {
+    height:120px;
+    width: 250px;
+    position:fixed;
+    top: 30px;
+    left: 30px;
+    padding: 1px 10px;
+    color: white;
+    font-size: 1em;
+    background-color: #d61;
+    font-family: helvetica;
+    box-shadow: 5px 5px 5px #222;
+    }
+
+    #container {
+    height: 600px;
+    width: 600px;
+    margin: 60px;
+    overflow: hidden;
+    position: relative;
+    cursor: crosshair;
+    background-image: url("img/back.jpg");
+    }
+
+    #object1 {
+    position: absolute;
+    transition: 1s;
+    left: 100px;
+    top: 400px;
+    animation-name: path1;
+    animation-duration: 30s;
+    animation-play-state: paused;
+    animation-iteration-count:infinite;
+    }
+
+    #object1:hover {
+    filter: blur(6px);
+    }
+
+    #object2{
+    position: absolute;
+    transition: 1s;
+    left: 100px;
+    top: 400px;
+    animation-name: path2;
+    animation-duration: 21s;
+    animation-play-state: paused;
+    animation-iteration-count:infinite;
+    }
+
+    #object2:hover {
+    filter: blur(6px);
+    }
+
+    #object3 {
+    position: absolute;
+    transition: 1s;
+    left: 100px;
+    top: 400px;
+    animation-name: path3;
+    animation-duration: 90s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+    }
+
+    #object3:hover {
+    filter: blur(6px);
+    }
+
+    @keyframes path1 {
+    0% {left: 600px; top: 400px; transform: rotateY(0deg);}
+    10% {left: -100px; top: 400px; transform: rotateY(0deg);}
+    20% {left: -250px; top: 30px; transform: rotateY(-180deg);}
+    30% {left: 606px; top: 300px; transform: rotateY(-180deg);}
+    40% {left: 607px; top: 200px; transform: rotateY(0deg);}
+    50% {left: 300px; top: 200px; transform: rotateY(0deg);}
+    60% {left: -250px; top: 300px; transform: rotateY(0deg);}
+    70% {left: -250px; top: 200px; transform: rotateY(-180deg);}
+    80% {left: 200px; top: 30px; transform: rotateY(-180deg);}
+    90% {left: 300px; top: 340px; transform: rotateY(-180deg);}
+    100% {left: 670px; top: 400px; transform: rotateY(-180deg);}
+    }
+
+    @keyframes path2 {
+    0% {left: -120px; top: 400px; transform: rotateY(-180deg);}
+    10% {left: -250px; top: 400px; transform: rotateY(-180deg);}
+    20% {left: -260px; top: 400px; transform: rotateY(-180deg); }
+    30% {left: -270px; top: 400px; transform: rotateY(-180deg);}
+    40% {left: 700px; top: 400px; transform: rotateY(-180deg);}
+    50% {left: 606px; top: 400px; transform: rotateY(0deg);}
+    60% {left: 616px; top: 400px; transform: rotateY(0deg);}
+    70% {left: 606px; top: 400px; transform: rotateY(0deg);}
+    80% {left: 300px; top: 400px; transform: rotateY(0deg);}
+    90% {left: -120px; top: 400px; transform: rotateY(0deg);}
+    100% {left: -259px; top: 400px; transform: rotateY(-180deg);}
+    }
+
+    @keyframes path3 {
+    0% {left: -300px; top: 100px; transform: rotateY(-180deg);}
+    10% {left: 600px; top: 50px; transform: rotateY(-180deg);}
+    20% {left: 650px; top: 50px; transform: rotateY(0deg);}
+    30% {left: -10px; top: 50px; transform: rotateY(0deg);}
+    40% {left: -150px; top: 200px; transform: rotateY(-180deg);}
+    50% {left: 606px; top: 200px; transform: rotateY(-180deg);}
+    60% {left: 616px; top: 100px; transform: rotateY(0deg);}
+    70% {left: 300px; top: 150px; transform: rotateY(0deg);}
+    80% {left: 200px; top: 250px; transform: rotateY(0deg);}
+    90% {left: 100px; top: 150px; transform: rotateY(0deg);}
+    100% {left: -200px; top: 45px; transform: rotateY(0deg);}
+    }
+
+    #chup {
+      display:block;
+      position:relative;
+  }
+
+    #rock {
+      display:block;
+      position:relative;
+      width:350px;
+    }
+
+    #hare {
+      display:block;
+      position:relative;
+  }
+
+  #chupheading {
+    float:left;
+  }

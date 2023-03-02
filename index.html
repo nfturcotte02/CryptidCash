@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Crytid Cash</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="container"
+onmousedown="document.getElementById('sound').play();"> <audio id="sound"><source src="audio/click.mp3" type="audio/mp3"></audio>
+
+<img src="img/obj1.gif" id="object1" onmousedown="document.getElementById('sound1').play();" onclick="clickCounter()"> <audio id="sound1"><source src="audio/sound1.mp3" type="audio/mp3"></audio>
+
+<img src="img/obj2.gif" id="object2" onmousedown="document.getElementById('sound2').play();" onclick="clickCounter()"> <audio id="sound2"><source src="audio/sound2.mp3" type="audio/mp3"></audio>
+
+<img src="img/obj3.gif" id="object3" onmousedown="document.getElementById('sound3').play();" onclick="clickCounter()"> <audio id="sound3"><source src="audio/sound3.mp3" type="audio/mp3"></audio></div>
+
+<div id="score" onclick="clearCounter()" onclick="clickCounter()"> <h3>Photograph the Central American Cryptids. Click Here to Start.</h3> <h2>REWARD: $<span id="result"></span></h2></div>
+
+<h1 style="color:white;">The Culprits</h1>
+<h2 style="color:white;">El Chupacabra</h2>
+
+
+<img id="chup" src="img/chup.png">
+
+<h3 style ="color:white";class="chupheading";>El Chupacabra(The goat-sucker) was first spotted in Puerto Rico in 1995 after life stock carcasses began appearing in various villages.
+     Discriptions of this creature have varied from sighting to sighting ranging from a kangaroo like creature to a wolf-like creature. A row of spikes
+     on the back of the creature is the only common feature among sightings.</h3>
+
+<h2 style="color:white;">Jackalope</h2>
+
+<img id="hare" src="img/jackolope.png">
+
+<h3 style="color:white;">Sightings for the Jackalope, a combination of the words jackrabbit and antelope, date back to the 13th century. Descriptions of this creature have stayed
+  consistant in almost every sighting. The Jackolope become prominant in the states in the 1930s when taxidermists began putting deer antlers on rabbit mounts, even though these
+  are not actually jackolopes, the taxidermist where inspired by previous sightings.</h3>
+
+
+<h2 style="color:white;">Cherufe</h2>
+
+<img id="rock" src="img/cherufe.png">
+
+<h3 style="color:white;">The Cherufe are believed to inhabit the magma pools found deep within the volcanoes in Chile. Though their natural habitat may be inside a scorching volcano,
+  there have been sighting above ground. Typically described as a creature made entirly out of hot lave, rocks, and magma; these creatures are believed by some to be the
+  source of earthquakes and volcanic eruptions. To try to prevent these natural disasters, certain cultures would provide a human sacrifice to a volcano to provide food for the Cherufe. </h3>
+<script>
+function clearCounter() {
+localStorage.clear();
+localStorage.clickcount = 0;
+document.getElementById("result").innerHTML = localStorage.clickcount;
+document.getElementById("object1").style.WebkitAnimationPlayState = "running";
+document.getElementById("object2").style.WebkitAnimationPlayState = "running";
+document.getElementById("object3").style.WebkitAnimationPlayState = "running";
+}
+
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+  if (localStorage.clickcount) {
+  localStorage.clickcount = Number(localStorage.clickcount)+50;
+  }
+  document.getElementById("result").innerHTML = localStorage.clickcount;
+  }
+}
+
+</script>
+</body>
+</html>
